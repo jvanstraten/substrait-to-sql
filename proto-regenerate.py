@@ -1,3 +1,9 @@
+"""
+Regenerates Substrait's protobuf files.
+
+Run when the Substrait submodule is updated.
+"""
+
 import os
 import shutil
 import subprocess
@@ -42,3 +48,8 @@ for path, _, files in os.walk(proto_module_dir):
     for fname in files:
         if fname.endswith("_grpc.py"):
             os.unlink(os.path.join(path, fname))
+
+# Apply code style fixes and add changed files to git index.
+subprocess.check_output(["git", "add", proto_module_dir])
+subprocess.run(["pre-commit", "run"])
+subprocess.check_output(["git", "add", proto_module_dir])
