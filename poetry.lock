@@ -246,6 +246,25 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "types-futures"
+version = "3.3.7"
+description = "Typing stubs for futures"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-protobuf"
+version = "3.19.6"
+description = "Typing stubs for protobuf"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+types-futures = "*"
+
+[[package]]
 name = "virtualenv"
 version = "20.13.0"
 description = "Virtual Python Environment builder"
@@ -266,7 +285,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1b407b6d346d45e956a852072bd09f7865275f66203366431b3b43bb15a18030"
+content-hash = "fc23a3695aae8eb54fd962469a1ca0f40cd36775ff97d5edd99cade7d8a05f76"
 
 [metadata.files]
 atomicwrites = [
@@ -498,6 +517,14 @@ six = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+types-futures = [
+    {file = "types-futures-3.3.7.tar.gz", hash = "sha256:d286db818fb67e3ce5c28acd9058c067329b91865acc443ac3cf91497fa36f05"},
+    {file = "types_futures-3.3.7-py3-none-any.whl", hash = "sha256:67fcd373796c8b4fb94fdb9cb006718c34be306f292b1e1f1e01f980d3630be5"},
+]
+types-protobuf = [
+    {file = "types-protobuf-3.19.6.tar.gz", hash = "sha256:ba586359dc80f09abbff7d143cedd5c86d2c6e376b46647c7aa2262741accba1"},
+    {file = "types_protobuf-3.19.6-py3-none-any.whl", hash = "sha256:0d704eca8c7cf2cc9d8b52f63a5d03d7c39dff8f0915c23b3e90cb1563617e18"},
 ]
 virtualenv = [
     {file = "virtualenv-20.13.0-py2.py3-none-any.whl", hash = "sha256:339f16c4a86b44240ba7223d0f93a7887c3ca04b5f9c8129da7958447d079b09"},

@@ -13,6 +13,7 @@ protobuf = "^3.19.3"
 pytest = "^6.2.5"
 protobuf-gen = "^0.0.4"
 pre-commit = "^2.17.0"
+types-protobuf = "^3.19.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -20,3 +21,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
+
+[mypy]
+ignore_missing_imports = true
